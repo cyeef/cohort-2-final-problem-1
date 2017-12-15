@@ -21,9 +21,92 @@
 
   </android.support.design.widget.AppBarLayout>
 
+  <EditText
+    android:id="@+id/fahrenheit"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="7dp"
+    android:inputType="numberDecimal|numberSigned"
+    android:hint = "Fahrenheit Input"
+    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="@+id/guideline"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.506"
+    tools:layout_constraintBaseline_creator="1"
+    tools:layout_constraintLeft_creator="1"/>
+
+  <EditText
+    android:id="@+id/celcius"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="0dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="8dp"
+    android:inputType="numberDecimal|numberSigned"
+    android:hint = "Celcius Input"
+    app:layout_constraintBottom_toTopOf="@+id/guideline2"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/guideline"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.506"
+    tools:layout_constraintLeft_creator="1"
+    tools:layout_constraintTop_creator="1"/>
+
+  <android.support.constraint.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/guideline"
+    android:orientation="vertical"
+    app:layout_constraintGuide_end="192dp"/>
+  <android.support.constraint.Guideline
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/guideline2"
+    app:layout_constraintGuide_begin="221dp"
+    android:orientation="horizontal"/>
   <FrameLayout
     android:id="@+id/fragment_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent">
+    <Button
+      android:id="@+id/celcius_to_fahrenheit"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="300dp"
+      android:layout_marginBottom="32dp"
+      android:layout_marginLeft="100dp"
+      android:text="Fahrenheit Conversion"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/guideline2"
+      app:layout_constraintVertical_bias="0.504"
+      tools:layout_constraintLeft_creator="1"
+      tools:layout_constraintTop_creator="1"/>
+    <Button
+      android:id="@+id/fahrenheit_to_celcius"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="200dp"
+      android:layout_marginBottom="32dp"
+      android:layout_marginStart="100dp"
+      android:layout_marginLeft="200dp"
+      android:layout_marginRight="100dp"
+      android:text="Celcius Conversion"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintHorizontal_bias="0.705"
+      app:layout_constraintLeft_toRightOf="@+id/celcius_to_fahrenheit"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/guideline2"
+      tools:layout_constraintBaseline_creator="1"
+      tools:layout_constraintLeft_creator="1"/>
+  </FrameLayout>
+
 
 </android.support.design.widget.CoordinatorLayout>
